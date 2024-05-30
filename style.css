@@ -1,0 +1,282 @@
+body {
+    background-color: rgba(18,30,44,255);
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    
+}
+
+.first {
+    display: flex;
+    background-color: rgba(7,171,103,255);
+    width: 100%;
+    height: 40px;
+    padding: 0; /* Ensure no padding */
+    margin: 0; /* Ensure no margin */
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-family: serif;
+}
+.second{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color:rgba(18,30,44,255) ;
+
+}
+.forth{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 8%;
+}
+.company-login-button {
+    background-color: #32c671;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.company-login-button .arrow {
+    font-size: 18px;
+}
+
+.company-login-button:hover {
+    background-color: #28a35a; /* Slightly darker green on hover */
+}
+.third{
+    display:flex;
+    
+}
+.text-container {
+    text-align:left; /* Adjust font size as needed */
+    line-height: 1.1; /* Adjust line height for spacing */
+    padding-left: 10%;
+    width: max-content;
+    padding-top: 10%;
+
+}
+.text{
+    font-size: 60px;
+    color:aliceblue;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+.text1{
+    font-size: 20px;
+    color:aliceblue;
+    font-family:serif;
+}
+.down{
+    display:flex;
+    align-items: center;
+    
+}
+
+.card {
+    position: relative; /* Required for positioning the :after pseudo-element */
+    height: 220px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1a1f2f 50%, #2f3138 50%);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Smooth transform effect */
+    border: 1px solid; /* Default border style */
+    overflow: hidden; /* Ensure the overlay doesn't spill out */
+}
+
+.card .icon,
+.card h2,
+.card p {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: inherit; /* Ensure icon color inherits from card */
+}
+
+.card h2 {
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+    color: inherit; /* Ensure h2 color inherits from card */
+}
+
+.card p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: inherit; /* Ensure paragraph color inherits from card */
+}
+
+.card:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(7, 171, 103, 0.5); /* Green overlay with 70% opacity */
+    opacity: 0;
+    transition: opacity 0.3s; /* Smooth opacity transition */
+    border-radius: 10px; /* Match card border radius */
+    z-index: 0; /* Ensure overlay is below the content */
+}
+
+
+.card:hover:after {
+    opacity: 0.9; /* Show green overlay on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.border-e1b4b7 {
+    border-color: #e1b4b7;
+}
+
+.border-bisque {
+    border-color: bisque;
+}
+
+.border-aqua {
+    border-color: aqua;
+}
+
+.border-aquamarine {
+    border-color: aquamarine;
+}
+
+.color-e1b4b7 {
+    color: #e1b4b7;
+}
+
+.color-bisque {
+    color: bisque;
+}
+
+.color-aqua {
+    color: rgb(152, 221, 221);
+}
+
+.color-aquamarine {
+    color: aquamarine;
+}
+.fifth{
+    padding-top: 8%;
+    background-color: #1f2e40;
+    height: 800px;
+}
+
+.flip-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+   /* Added margin for better visibility */
+   
+  }
+
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .front, .back {
+    display: flex;justify-content:center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white; /* Set text color to white */
+    /* Added border for better visibility */
+    box-sizing: border-box; /* Ensure border doesn't affect dimensions */
+  }
+
+  .front {
+    background-color: rgba(18,30,44,255); /* Set front div background color to blue */
+  }
+
+  .back {
+    background-color:  #32c671; /* Set back div background color to green */
+    transform: rotateY(180deg);
+  }
+  .container {
+    display: flex;
+    overflow: hidden;
+    gap: 30px;
+  }
+
+  .circular-div {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* This makes the div circular */
+    overflow: hidden; /* Hide the overflow from the image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for a nice effect */
+    margin-right: 10px; /* Add space between circular divs */
+    animation: moveLeftToRight 5s linear infinite; /* Animation to move divs */
+    cursor: pointer; /* Change cursor to indicate clickability */
+  }
+
+  .circular-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image covers the entire div */
+  }
+
+  @keyframes moveLeftToRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(100% + 10px)); /* Translate by div width + margin */
+    }
+  }
+
+  .last {
+    background-color: #1f2e40;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkedin-button{
+    color: #ffffff;
+}
